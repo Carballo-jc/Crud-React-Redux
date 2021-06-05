@@ -1,6 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { loadProducts } from "../../actions/productsActions";
+import Product from "./Product";
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const products = useSelector(state => state.products.products)
+  const loaderProducts = () => dispatch(loadProducts(products));
+  useEffect(() =>  {
+    loaderProducts();
+  },[]);
   return (
     <Fragment>
       <h2 className="text-center my-5">Listado de Productos</h2>
@@ -12,7 +22,15 @@ const Products = () => {
             <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {
+            products.length === 0 ? 'No hay Productos' :(
+              products.map((product,id) =>(
+                <Product key={id} product={product} />
+              ))
+            )
+          }
+        </tbody>
       </table>
     </Fragment>
   );

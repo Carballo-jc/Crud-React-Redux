@@ -1,3 +1,6 @@
 export const types = {
-  Agregar: "[Producto_Agregado]",
+  Add_Products: "[Producto_Agregado]",
+
+  Load_Products: "[Descargando_Productos]",
+  Products_Loader: "[Productos_Cargados]",
 };
