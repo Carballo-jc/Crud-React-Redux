@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
       <div className="container">
         <h1>
-          <Link className="text-light" to={"/"}>
+          <Link className="text-light" to={"/productos"}>
             CRUD-REACT, REDUX
           </Link>
         </h1>

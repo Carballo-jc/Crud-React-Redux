@@ -1,8 +1,8 @@
 {
   "productos": [
     {
-      "name": "Jugo de Zanahoria",
-      "price": 31111,
+      "name": "Jugo de Zanahorias",
+      "price": "200",
       "id": 1
     },
     {
@@ -16,7 +16,7 @@
       "id": 3
     },
     {
-      "name": "Rib Eye 800g",
+      "name": "Rib Eye 800gs",
       "price": 200,
       "id": 4
     },
@@ -27,16 +27,28 @@
     },
     {
       "name": "papaya",
-      "price": 200,
+      "price": "500",
       "id": 6
     },
     {
-      "name": "patilla",
-      "price": 200,
+      "name": "guayaba",
+      "price": "150",
       "id": 7
     },
     {
+      "name": "jugo xxx",
+      "price": "250",
       "id": 8
+    },
+    {
+      "name": "cualquier",
+      "price": "250",
+      "id": 9
+    },
+    {
+      "name": "papaya",
+      "price": "220",
+      "id": 10
     }
   ]
 }

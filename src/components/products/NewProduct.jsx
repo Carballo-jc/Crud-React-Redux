@@ -1,21 +1,26 @@
 import React from "react";
 import { useForm } from "../../hooks/useForm";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../actions/productsActions";
+import { addProductAction } from "../../actions/productsActions";
+import { useHistory } from "react-router-dom";
 
 const NewProduct = () => {
   const dispatch = useDispatch();
-
+const history = useHistory();
   const [formValues, handleImputChange] = useForm({
     name: "",
-    price: 200,
+    price:'',
   });
+ 
   const { name, price } = formValues;
-  // const addNewProduct = (product) => dispatch(addProduct(product));
+  //  const addNewProduct = (formValues) => dispatch(addProductAction(formValues));
   const saveProduct = (e) => {
     e.preventDefault();
-    dispatch(addProduct(formValues));
-  };
+    if(name ==='' || price === '') return false;
+      dispatch(addProductAction(formValues));
+      history.push('/productos');
+    // addNewProduct(formValues);
+  };;
 
   return (
     <div className="row justify-content-center">
